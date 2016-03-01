@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>姜周の生日礼物</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code">
+                <span class="comments">#include</span>
+                <br />
+                <span class="comments">int main(){</span>
+                <br />
+                <span class="comments">马铃薯和土豆</span>
+                <br />
+                <span class="comments">西红柿和番茄</span>
+                <br />
+                <span class="comments">我喜欢的人和你</span>
+                <br />
+                <span class="comments">不知不觉，走过1个月的考验</span>
+                <br />
+                <span class="comments">记得</span>
+                <br />
+                <span class="comments">第一次的勾搭来自于QQ，认真而严肃的咨询</span>
+                <br />
+                <span class="comments">第一次的约会放在看不到熊猫动物园</span>
+                <br />
+                <span class="comments">第一次的表白被高数考试铭记着，有惊无险</span>
+                <br />
+                <span class="comments">同为新手</span>
+                <br />
+                <span class="comments">互相打探</span>
+                <br />
+                <span class="comments">怀着拆开一份精致礼品的心态</span>
+                <br />
+                <span class="comments">去了解一个精彩人</span>
+                <br />
+                <span class="comments">风吹起你的头发</span>
+                <br />
+                <span class="comments">一张棕色的小网</span>
+                <br />
+                <span class="comments">洒满我的脸颊</span>
+                <br />
+                <span class="comments">而我</span>
+                <br />
+                <span class="comments">却不想挣脱</span>
+                <br />
+                <span class="comments">。</span>
+                <br />
+                <span class="comments">『时而高冷的整合艺术家』：</span>
+                <br />
+                <span class="comments">又长了一岁咯</span>
+                <br />
+                <span class="comments">长路漫漫，</span>
+                <br />
+                <span class="comments">手拿来，</span>
+                <br />
+                <span class="comments">我俩一起踏去~</span>
+                <br />
+                <span class="comments">return 0;}</span>
+                <br />
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        亲爱的，这已经是我们在一起的
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Happy Birthday!
+                        <br/>May you be young foreve
+                        <div class="signature">- 静远</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2015, 12, 15);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 5000);
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+    <audio src="qingge.mp3" autoplay="true" />
+</body>
+</html>
